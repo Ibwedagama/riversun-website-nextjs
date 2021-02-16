@@ -1,0 +1,139 @@
+@import '../../styles/variabels';
+
+.mainform {
+	width: 100%;
+	padding: 30px;
+
+	.header {
+		display: flex;
+		width: 100%;
+		height: auto;
+		padding-bottom: 24px;
+		align-items: center;
+		justify-content: flex-end;
+
+		svg {
+			cursor: pointer;
+			font-size: 1.5rem;
+			color: $primary_black;
+		}
+	}
+
+	.title {
+		margin: 0;
+		padding: 0;
+		font-family: Raleway;
+		font-style: normal;
+		font-weight: 800;
+		font-size: 2rem;
+		line-height: 42px;
+		color: $primary_black;
+		margin-bottom: 18px;
+	}
+
+	.subtitle {
+		margin: 0;
+		padding: 0;
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 1rem;
+		line-height: 20px;
+		color: #777777;
+	}
+
+	form {
+		margin: 50px 0;
+
+		.formControl {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 35px;
+			label {
+				margin: 0;
+				padding: 0;
+				font-family: Montserrat;
+				font-style: normal;
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 20px;
+				color: $primary_black;
+				margin-bottom: 12px;
+			}
+			.input,
+			.textarea {
+				padding: 18px 20px;
+				background: #f5f5f5;
+				border: none;
+				font-family: Montserrat;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 1rem;
+				line-height: 20px;
+				color: #555555;
+				&:focus {
+					outline: none;
+				}
+			}
+
+			.input.warning {
+				border: 1px solid $error;
+			}
+		}
+
+		.buttonGroup {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}
+
+@media (min-width: 900px) {
+	.mainform {
+		flex-direction: column;
+
+		.title {
+			font-size: 4rem;
+			font-weight: 800;
+			line-height: 82px;
+		}
+		form {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			column-gap: 20px;
+			grid-template-areas: 'name email' 'company subject' 'message message' 'alert alert' 'button button';
+
+			.formControl:nth-child(1) {
+				grid-area: name;
+			}
+			.formControl:nth-child(2) {
+				grid-area: email;
+			}
+			.formControl:nth-child(3) {
+				grid-area: company;
+			}
+			.formControl:nth-child(4) {
+				grid-area: subject;
+			}
+			.formControl:nth-child(5) {
+				grid-area: message;
+			}
+			div:nth-child(6) {
+				grid-area: alert;
+			}
+			.buttonGroup {
+			}
+			.buttonGroup {
+				grid-area: button;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				column-gap: 20px;
+			}
+		}
+	}
+}

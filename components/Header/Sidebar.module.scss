@@ -1,0 +1,51 @@
+@import '../../styles/variabels';
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba($color:$primary_black, $alpha: 0.7);
+    z-index: 101;
+    transition: 0.3s ease-in;
+}
+
+.sidebar {
+	position: absolute;
+	top: 0;
+	right: -100%;
+	width: 100%;
+	height: 100vh;
+	transition: 0.45s ease-out;
+    z-index: 102;
+    background: $white;
+
+	.header {
+		width: 100%;
+		height: auto;
+		padding: 24px 0;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+
+		svg {
+			font-size: 1.5rem;
+			color: $primary_black;
+		}
+	}
+
+	.body {
+        display: flex;
+        flex-direction: column;
+		flex: 1;
+		align-items: center;
+        justify-content: center;
+        row-gap: 40px;
+	}
+}
+
+.sidebar.open {
+	transition: 0.45s ease-out;
+	right: 0;
+}

@@ -1,0 +1,48 @@
+@import '../../styles/variabels';
+
+.process {
+	width: 100%;
+	display: grid;
+	position: relative;
+	grid-template-columns: 1fr;
+	grid-template-rows: 100px auto auto;
+	align-items: center;
+
+	.image {
+		position: relative;
+		width: 100px;
+		height: auto;
+	}
+
+	.title {
+		font-family: Raleway;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 1rem;
+		line-height: 19px;
+		color: $primary_black;
+		margin-bottom: 21px;
+	}
+	.desc {
+		display: none;
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 180%;
+		color: $secondary_gray;
+	}
+}
+
+@media (min-width: 900px) {
+	.process {
+		grid-template-rows: 200px auto auto;
+
+		.desc {
+			display: block;
+		}
+		.image {
+			width: 200px;
+		}
+	}
+}

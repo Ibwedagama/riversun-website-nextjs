@@ -1,0 +1,74 @@
+@use '../../styles/variabels' as v;
+
+.navbar {
+	padding: 20px 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	background-color: transparent;
+
+	.content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.logo {
+			width: 100px;
+			height: 100%;
+
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		
+		.navlink {
+			display: none;
+		}
+		.toggleButton {
+			display: flex;
+			align-items: center;
+			svg {
+				font-size: 1.5rem;
+				color: v.$primary_black;
+			}
+		}
+	}
+}
+
+
+.navbar.secondary {
+	background: v.$white;
+}
+
+
+
+@media (min-width: 900px) {
+	
+	.navbar {
+		padding: 8px 0;
+		.content {
+			.logo {
+				width: 156px;
+				height: 100%;
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+			
+			.navlink {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				column-gap: 90px;
+			}
+			.toggleButton {
+				display: none;
+			}
+		}
+	}
+}

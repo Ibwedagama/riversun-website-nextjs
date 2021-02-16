@@ -1,0 +1,78 @@
+@import '../../../styles/variabels';
+
+.button {
+	display: flex;
+	column-gap: 12px;
+	align-items: center;
+	justify-content: center;
+	width: auto;
+	padding: 0;
+	padding: 12px 24px;
+	border: 1px solid $primary_black;
+	background: transparent;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 1rem;
+	line-height: 20px;
+	transition: 0.3s ease-in;
+	cursor: pointer;
+	&:focus {
+		outline: none;
+	}
+
+	svg {
+		transition: 0.3s ease-in;
+	}
+}
+
+.button.primary {
+	color: $primary_black;
+	&:hover {
+		background: $primary_black;
+		color: $yellow;
+
+		svg {
+			color: $yellow;
+		}
+	}
+	svg {
+		font-size: 1.5rem;
+		color: $primary_black;
+	}
+}
+
+.button.secondary {
+	background: $primary_black;
+	color: $white;
+	&:hover {
+		background: $primary_black;
+		color: $yellow;
+
+		svg {
+			color: $yellow;
+		}
+	}
+	svg {
+		font-size: 1.5rem;
+		color: $white;
+	}
+}
+
+.button.third{
+	background: $white;
+	color: $primary_black;
+	border: none;
+	&:hover {
+		background: $primary_black;
+		color: $yellow;
+
+		svg {
+			color: $yellow;
+		}
+	}
+	svg {
+		font-size: 1.5rem;
+		color: $primary_black;
+	}
+}
