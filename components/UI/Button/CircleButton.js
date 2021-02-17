@@ -22,8 +22,9 @@ const CircleButton = ({ types = 'default', href = '/' }) => {
 			break
 	}
 	return (
-		<a href={href} target='_blank' rel='noopener noreferer' className={styles.button}>
+		<a href={href} target='_blank' rel='noopener' className={styles.button}>
 			{icon}
+			<span style={{ position: 'absolute', color: 'transparent' }}>{types}</span>
 		</a>
 	)
 }
