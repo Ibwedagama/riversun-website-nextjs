@@ -56,9 +56,9 @@ export default function Home() {
 			<section className={styles.who_we_are} id='main'>
 				<Wrapper>
 					<section className={`${styles.container_who_we_are}`}>
-						<h3 className={`${styles.title} section-1`}>
+						<h2 className={`${styles.title} section-1`}>
 							<span className={`${styles.titleDecoration}`}>01</span>Who We Are
-						</h3>
+						</h2>
 						<p className={`${styles.subtitle} section-1`}>
 							We are a team of passionate UI/UX Designer, and we believe with the right design and
 							strong collaboration, we can support your brand growth and help you fulfill your
@@ -72,9 +72,9 @@ export default function Home() {
 			<section className={styles.what_we_make}>
 				<Wrapper>
 					<section className={styles.container_what_we_make}>
-						<h3 className={`${styles.title} section-2`}>
+						<h2 className={`${styles.title} section-2`}>
 							<span className={styles.titleDecoration}>02</span>What We Make
-						</h3>
+						</h2>
 						<p className={`${styles.subtitle} section-2`}>
 							Some of the services we can discuss together
 						</p>
@@ -110,9 +110,9 @@ export default function Home() {
 			<section className={styles.how_we_work}>
 				<Wrapper>
 					<section className={styles.container_how_we_work}>
-						<h3 className={`${styles.title} section-3`}>
+						<h2 className={`${styles.title} section-3`}>
 							<span className={styles.titleDecoration}>03</span>How We Work
-						</h3>
+						</h2>
 						<p className={`${styles.subtitle} section-3`}>
 							The right solution come out from the right process
 						</p>
@@ -166,9 +166,9 @@ export default function Home() {
 			<section className={styles.featured_projects}>
 				<Wrapper>
 					<section className={styles.container_featured_projects}>
-						<h3 className={`${styles.title} section-4`}>
+						<h2 className={`${styles.title} section-4`}>
 							<span className={styles.titleDecoration}>04</span>Featured Projects
-						</h3>
+						</h2>
 						<p className={`${styles.subtitle} section-4`}>
 							Some of the projects we've made with our amazing clients
 						</p>
