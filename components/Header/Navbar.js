@@ -40,7 +40,7 @@ const Navbar = ({ toggleSidebar, toggleModal }) => {
 					<div className={styles.logo}>
 						<Link href='/' forwardRef>
 							<a>
-								<img src='/assets/images/riversunlogo.png' alt='Riversun Logo' />
+								<img src='/assets/images/riversunlogo.webp' alt='Riversun Logo' />
 							</a>
 						</Link>
 					</div>

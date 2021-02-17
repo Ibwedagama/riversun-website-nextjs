@@ -8,6 +8,7 @@ import Service from '../components/Card/Service'
 import Project from '../components/Card/Project'
 import SEO from '../components/SEO/SEO'
 import { gsapAnimation } from '../util/Animation'
+import { gsap } from 'gsap/dist/gsap'
 
 export default function Home() {
 	const handleScrollToMain = () => {
@@ -118,7 +119,7 @@ export default function Home() {
 						<section className={styles.process}>
 							<section className='section-3'>
 								<Process
-									src='/assets/images/icon_research.png'
+									src='/assets/images/icon-research.webp'
 									alt='Research Process by Riversun'
 									width={236}
 									height={181}
@@ -128,7 +129,7 @@ export default function Home() {
 							</section>
 							<section className='section-3'>
 								<Process
-									src='/assets/images/icon_design.png'
+									src='/assets/images/icon-design.webp'
 									alt='Design Process by Riversun'
 									width={219}
 									height={181}
@@ -138,7 +139,7 @@ export default function Home() {
 							</section>
 							<section className='section-3'>
 								<Process
-									src='/assets/images/icon_dev.png'
+									src='/assets/images/icon-dev.webp'
 									alt='Development Process by Riversun'
 									width={241}
 									height={181}
@@ -148,7 +149,7 @@ export default function Home() {
 							</section>
 							<section className='section-3'>
 								<Process
-									src='/assets/images/icon_testing.png'
+									src='/assets/images/icon-testing.webp'
 									alt='Testing Process by Riversun'
 									width={288}
 									height={181}
