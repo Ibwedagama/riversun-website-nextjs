@@ -113,7 +113,7 @@ const MainForm = () => {
 						touched: true,
 					},
 					['subject']: {
-						...prevState['name'],
+						...prevState['subject'],
 						touched: true,
 					},
 				}
