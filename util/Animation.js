@@ -1,7 +1,9 @@
+import { gsap } from 'gsap/dist/gsap'
+
 export function gsapAnimation() {
 	let tl = gsap.timeline({ defaults: { ease: 'expo.out', opacity: 0 } })
-	tl.from('#hero-image', { x: '100%', delay: 0.5, duration: 2.5 })
-		.from('.hero-title', { y: '100%', stagger: 0.4, duration: 1.3 }, '<.5')
+	tl.from('#hero-image', { x: '100%', duration: 1.5 })
+		.from('.hero-title', { y: '100%', stagger: 0.4, duration: 1.5 }, '<.5')
 		.from('.hero-decoration', { duration: 1.5 }, '<1.5')
 
 	gsap.from('.section-1', {

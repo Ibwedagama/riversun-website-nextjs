@@ -11,9 +11,6 @@ const SEO = ({
 			<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
 			<meta name='description' content={desc} />
 			<meta name='viewport' content='width=device-width, initial-scale=1'></meta>
-			<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js'></script>
-			<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollToPlugin.min.js'></script>
-			<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js'></script>
 		</Head>
 	)
 }
