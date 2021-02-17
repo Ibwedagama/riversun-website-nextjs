@@ -19,10 +19,8 @@ function MyApp({ Component, pageProps }) {
 		let body = document.querySelector('body')
 		if (toggleModal) {
 			body.style.overflowY = 'hidden'
-			console.log('modal is open')
 		} else {
 			body.style.overflowY = 'scroll'
-			console.log('modal is close')
 		}
 	}, [toggleModal])
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import styles from './Layout.module.scss'
 import Navbar from '../Header/Navbar'
 import Sidebar from '../Header/Sidebar'

@@ -5,12 +5,10 @@ import { MdCheckCircle, MdCancel, MdError } from 'react-icons/md'
 const Alert = ({ type = 'default' }) => {
 	const [hide, setHide] = useState(false)
 	useEffect(() => {
-		console.log('hide menjadi false')
 		setHide(false)
 		setTimeout(() => {
 			setHide(true)
 			type = 'default'
-			console.log('hide menjadi true')
 		}, 5000)
 	}, [type])
 	let style = ''

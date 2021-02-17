@@ -5,7 +5,7 @@ import { MdClose } from 'react-icons/md'
 import Wrapper from '../Layout/Wrapper'
 import Button from '../UI/Button/Button'
 
-const Sidebar = ({ isSidebarOpen, toggleSidebar, toggleModal, closeSidebar }) => {
+const Sidebar = ({ isSidebarOpen, toggleModal, closeSidebar }) => {
 	useEffect(() => {
 		let body = document.querySelector('body')
 		if (isSidebarOpen) {
