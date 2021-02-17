@@ -1,15 +1,31 @@
 import '../styles/globals.css'
 import Layout from '../components/Layout/Layout'
 import { useState, useEffect } from 'react'
+import { gsap } from 'gsap/dist/gsap'
+import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+
+gsap.registerPlugin(ScrollToPlugin, ScrollTrigger)
 
 function MyApp({ Component, pageProps }) {
-
 	const [toggleSidebar, setToggleSidebar] = useState(false)
 	const [toggleModal, setToggleModal] = useState(false)
 
 	useEffect(() => {
 		setToggleSidebar(false)
+		setToggleModal(false)
 	}, [Component])
+
+	useEffect(() => {
+		let body = document.querySelector('body')
+		if (toggleModal) {
+			body.style.overflowY = 'hidden'
+			console.log('modal is open')
+		} else {
+			body.style.overflowY = 'scroll'
+			console.log('modal is close')
+		}
+	}, [toggleModal])
 
 	const handleToggleSidebar = () => {
 		setToggleSidebar(!toggleSidebar)

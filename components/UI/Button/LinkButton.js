@@ -36,7 +36,7 @@ const LinkButton = ({
 	}
 	return (
 		<Link href={href} passHref>
-			<a target={newTab ? '_blank' : ''} rel='noreferer noopener' className={className}>
+			<a target={newTab ? '_blank' : ''} rel='noopener' className={className}>
 				<span>{whatsapp ? <ImWhatsapp /> : ''}</span>
 				{label} <span>{icon ? <MdArrowForward /> : ''}</span>
 			</a>

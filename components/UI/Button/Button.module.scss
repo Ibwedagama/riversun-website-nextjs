@@ -17,6 +17,11 @@
 	line-height: 20px;
 	transition: 0.3s ease-in;
 	cursor: pointer;
+
+	&:disabled {
+		background: $secondary_gray;
+	}
+
 	&:focus {
 		outline: none;
 	}
@@ -59,7 +64,7 @@
 	}
 }
 
-.button.third{
+.button.third {
 	background: $white;
 	color: $primary_black;
 	border: none;
@@ -74,5 +79,25 @@
 	svg {
 		font-size: 1.5rem;
 		color: $primary_black;
+	}
+}
+
+.button.fourth {
+	background-color: $primary_black;
+	border: 1px solid $white;
+	color: $white;
+
+	&:hover {
+		border: 1px solid $white;
+		background: $white;
+		color: $primary_black;
+
+		svg {
+			color: $primary_black;
+		}
+	}
+	svg {
+		font-size: 1.5rem;
+		color: $white;
 	}
 }

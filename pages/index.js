@@ -1,10 +1,24 @@
+import { useEffect } from 'react'
 import styles from '../styles/Home.module.scss'
 import Wrapper from '../components/Layout/Wrapper'
 import Button from '../components/UI/Button/Button'
 import Image from 'next/image'
 import Process from '../components/Card/Process'
+import Service from '../components/Card/Service'
+import Project from '../components/Card/Project'
+import { gsap } from 'gsap/dist/gsap'
 
 export default function Home() {
+	const handleScrollToMain = () => {
+		gsap.to(window, { duration: 1, scrollTo: '#main', ease: 'power2In' })
+	}
+
+	const gsapAnimation = () => {}
+
+	useEffect(() => {
+		gsapAnimation()
+	}, [])
+
 	return (
 		<main className={styles.home}>
 			{/* Hero Section */}
@@ -20,7 +34,7 @@ export default function Home() {
 								We are a team of passionate UI/UX Designer and Website Developer. We will be happy
 								to collaborate with you and create something amazing!
 							</p>
-							<Button label={`KNOW MORE`} icon={true} types='third' />
+							<Button label={`KNOW MORE`} icon={true} types='third' action={handleScrollToMain} />
 						</section>
 						<Image
 							src='/assets/images/hero_illustration.webp'
@@ -35,7 +49,7 @@ export default function Home() {
 			</section>
 
 			{/* Who We Are */}
-			<section className={styles.who_we_are}>
+			<section className={styles.who_we_are} id='main'>
 				<Wrapper>
 					<section className={styles.container_who_we_are}>
 						<h3 className={styles.title}>
@@ -58,7 +72,26 @@ export default function Home() {
 							<span className={styles.titleDecoration}>02</span>What We Make
 						</h3>
 						<p className={styles.subtitle}>Some of the services we can discuss together</p>
-						<section className={styles.services}></section>
+						<section className={styles.services}>
+							<Service
+								src='/assets/images/ServiceSatu.webp'
+								alt='UI/UX Design Service by Riversun Studio'
+								width={518}
+								height={320}
+								title='UI/UX Design'
+								desc='The right design will make you easier to achieve your goals in the future. By considering UX ( User Experience ) you can create a website or applications that not only work but are also  comfortable and friendly for the users'
+							/>
+							<Service
+								src='/assets/images/ServiceDua.webp'
+								alt='Website Development Service by Riversun Studio'
+								width={518}
+								height={320}
+								title='Website Development'
+								desc={`The website will make you easier to reach new customers
+								in this digital era. Show who you are with a website that describes your self-image. Let's discuss with us about 
+								your dream website, and let's make it happen together`}
+							/>
+						</section>
 					</section>
 				</Wrapper>
 			</section>
@@ -103,6 +136,49 @@ export default function Home() {
 								height={181}
 								title='Testing'
 								desc='To make sure that we’ve hit all the checkmarks, we love to do user testing with some of your potential customers. This will help us determine what’s good and what’s can be improved.'
+							/>
+						</section>
+					</section>
+				</Wrapper>
+			</section>
+
+			{/* Featured Projects */}
+			<section className={styles.featured_projects}>
+				<Wrapper>
+					<section className={styles.container_featured_projects}>
+						<h3 className={styles.title}>
+							<span className={styles.titleDecoration}>04</span>Featured Projects
+						</h3>
+						<p className={styles.subtitle}>
+							Some of the projects we've made with our amazing clients
+						</p>
+						<section className={styles.projects}>
+							<Project
+								src='/assets/images/FP1.webp'
+								width={505}
+								height={607}
+								alt='Project Acil'
+								title='Our Journey With Plant Story App'
+								link='/'
+								tag='#STUDY CASE 1'
+							/>
+							<Project
+								src='/assets/images/FP1.webp'
+								width={505}
+								height={607}
+								alt='Project Acil'
+								title='Our Journey With Plant Story App'
+								link='/'
+								tag='#STUDY CASE 1'
+							/>
+							<Project
+								src='/assets/images/FP1.webp'
+								width={505}
+								height={607}
+								alt='Project Acil'
+								title='Our Journey With Plant Story App'
+								link='/'
+								tag='#STUDY CASE 1'
 							/>
 						</section>
 					</section>

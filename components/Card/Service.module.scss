@@ -1,0 +1,78 @@
+@import '../../styles/variabels';
+
+.service {
+	display: grid;
+	position: relative;
+	width: 100%;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr auto auto;
+	align-items: center;
+	justify-content: flex-start;
+	filter: drop-shadow(0px 15px 30px rgba(0, 0, 0, 0.08));
+
+	.details {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		background: $white;
+		padding: 20px 20px;
+
+		.title {
+			margin: 0;
+			padding: 0;
+			font-family: Raleway;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 1.1rem;
+			line-height: 23px;
+			color: $primary_black;
+			margin-bottom: 14px;
+		}
+		.subtitle {
+			margin: 0;
+			padding: 0;
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 1rem;
+			line-height: 180%;
+			color: $secondary_gray;
+			transition: height 2s linear;
+		}
+		.subtitle.expand {
+			height: auto;
+			// max-height: 120px;
+			transition: height 0.3s ease-out;
+		}
+	}
+
+	.button {
+		width: 100%;
+		display: flex;
+		padding: 20px 20px;
+		align-items: center;
+		justify-content: flex-end;
+		background: $white;
+
+		p {
+			cursor: pointer;
+			margin: 0;
+			padding: 0;
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 1rem;
+			line-height: 20px;
+			color: $primary_black;
+		}
+	}
+}
+
+@keyframes expand {
+	from {
+		height: auto;
+	}
+	to {
+		height: 220px;
+	}
+}

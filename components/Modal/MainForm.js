@@ -34,6 +34,7 @@ const MainForm = () => {
 	const [result, setResult] = useState(false)
 	const [error, setError] = useState(false)
 	const [warning, setWarning] = useState(false)
+	const [loading, setLoading] = useState(false)
 
 	const handleFormData = (e) => {
 		const key = e.target.id
@@ -74,6 +75,7 @@ const MainForm = () => {
 	const sendEmail = (e) => {
 		e.preventDefault()
 		if (formData.name.validate && formData.email.validate && formData.subject.validate) {
+			setLoading(true)
 			init(process.env.NEXT_PUBLIC_EMAILJS_USER_ID)
 			emailjs
 				.sendForm(
@@ -87,12 +89,14 @@ const MainForm = () => {
 						if (result) {
 							setResult(true)
 							setWarning(false)
+							setLoading(false)
 						}
 					},
 					(error) => {
 						if (error) {
 							setError(true)
 							setWarning(false)
+							setLoading(false)
 						}
 					}
 				)
@@ -204,15 +208,27 @@ const MainForm = () => {
 				{warning ? <Alert type='warning' /> : ''}
 
 				<div className={styles.buttonGroup}>
-					<Button label='SEND MESSAGE' type='submit' types='secondary' icon={true} />
-					<p>Or</p>
-					<LinkButton
-						label='WHATSAPP US'
-						type='primary'
-						whatsapp={true}
-						newTab={true}
-						href={`https://wa.me/62895800287994?text=${encodeURI(`Hello Riversun Studio :)`)}`}
-					/>
+					{loading ? (
+						<Button
+							label='SENDING...'
+							type='button'
+							types='secondary'
+							loading={true}
+							isDisabled={true}
+						/>
+					) : (
+						<>
+							<Button label='SEND MESSAGE' type='submit' types='secondary' icon={true} />
+							<p>Or</p>
+							<LinkButton
+								label='WHATSAPP US'
+								types='primary'
+								whatsapp={true}
+								newTab={true}
+								href={`https://wa.me/62895800287994?text=${encodeURI(`Hello Riversun Studio :)`)}`}
+							/>
+						</>
+					)}
 				</div>
 			</form>
 		</section>

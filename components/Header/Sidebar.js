@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './Sidebar.module.scss'
 import NavLink from '../UI/NavLink/NavLink'
 import { MdClose } from 'react-icons/md'
@@ -6,6 +6,14 @@ import Wrapper from '../Layout/Wrapper'
 import Button from '../UI/Button/Button'
 
 const Sidebar = ({ isSidebarOpen, toggleSidebar, toggleModal, closeSidebar }) => {
+	useEffect(() => {
+		let body = document.querySelector('body')
+		if (isSidebarOpen) {
+			body.style.overflowY = 'hidden'
+		} else {
+			body.style.overflowY = 'scroll'
+		}
+	}, [isSidebarOpen])
 	return (
 		<div className={isSidebarOpen ? `${styles.sidebar} ${styles.open}` : styles.sidebar}>
 			<Wrapper>

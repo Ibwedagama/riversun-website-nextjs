@@ -2,13 +2,17 @@ import React from 'react'
 import styles from './Button.module.scss'
 import { MdArrowForward } from 'react-icons/md'
 import { ImWhatsapp } from 'react-icons/im'
+import { MdSend } from 'react-icons/md'
 
 const Button = ({
 	label = 'N/A',
+	type = 'button',
 	types = 'primary',
 	action = null,
 	icon = false,
+	loading = false,
 	whatsapp = false,
+	isDisabled = false,
 }) => {
 	let className = ''
 	switch (types) {
@@ -33,9 +37,10 @@ const Button = ({
 			break
 	}
 	return (
-		<button className={className} onClick={action}>
+		<button className={className} onClick={action} disabled={isDisabled} type={type}>
 			<span>{whatsapp ? <ImWhatsapp /> : ''}</span>
 			{label} <span>{icon ? <MdArrowForward /> : ''}</span>
+			<span>{loading ? <MdSend /> : ''}</span>
 		</button>
 	)
 }
