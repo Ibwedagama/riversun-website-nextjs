@@ -1,19 +1,16 @@
 @import '../../styles/variabels';
 
+.header {
+	display: flex;
+	width: 100%;
+	height: auto;
+	padding: 24px;
+	align-items: center;
+	justify-content: flex-end;
 
-    .header {
-        display: flex;
-        width: 100%;
-        height: auto;
-        padding: 24px;
-        align-items: center;
-        justify-content: flex-end;
-    
-        svg {
-            cursor: pointer;
-            font-size: 1.5rem;
-            color: $primary_black;
-        }
-    }
-
-
+	svg {
+		cursor: pointer;
+		font-size: 1.5rem;
+		color: $primary_black;
+	}
+}

@@ -9,7 +9,7 @@ const Service = ({ src, alt, title, desc, width, height }) => {
 		setExpand(!expand)
 	}
 	return (
-		<section className={styles.service}>
+		<section className={`${styles.service}`}>
 			<Image
 				src={src}
 				alt={alt}
