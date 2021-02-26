@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styles from '../styles/Blog.module.scss'
 import Wrapper from '../components/Layout/Wrapper'
 import Post from '../components/Card/Post'
-import axios from 'axios'
+import SEO from '../components/SEO/SEO'
 
 const blog = ({ posts }) => {
 	let postData = null
@@ -16,6 +16,10 @@ const blog = ({ posts }) => {
 
 	return (
 		<main className={styles.blog}>
+			<SEO
+				title='Riversun Studio | Blog'
+				desc='Riversun Studio Blog Posts. Learn more about UI/UX Design, Website Development and New Technologies.'
+			/>
 			<Wrapper>
 				<section className={styles.content}>
 					<h1 className={styles.title}>Blog</h1>
@@ -74,5 +78,6 @@ export async function getStaticProps(context) {
 		props: {
 			posts: data,
 		},
+		revalidate: 300,
 	}
 }

@@ -2,10 +2,15 @@ import React, { useState, useEffect } from 'react'
 import styles from '../styles/Portfolio.module.scss'
 import Wrapper from '../components/Layout/Wrapper'
 import Project from '../components/Card/Project'
+import SEO from '../components/SEO/SEO'
 
 const portfolio = () => {
 	return (
 		<main className={styles.portfolio}>
+			<SEO
+				title='Riversun Studio | Our Works'
+				desc={`Some of the projects we've made with our amazing clients.`}
+			/>
 			<Wrapper>
 				<section className={styles.content}>
 					<h1 className={styles.title}>Our Works</h1>

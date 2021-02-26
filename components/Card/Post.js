@@ -12,7 +12,7 @@ const Post = ({
 	authorImage = '',
 }) => {
 	return (
-		<a href={link} target='_blank' rel='noopener'>
+		<a href={link} target='_blank' rel='noopener noreferrer' alt={title}>
 			<article className={styles.card}>
 				<section className={styles.header}>
 					<Image src={thumbnail} layout='fill' objectFit='cover' />
