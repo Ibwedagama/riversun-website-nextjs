@@ -15,10 +15,6 @@ export default function Home() {
 		gsap.to(window, { duration: 1.3, scrollTo: '#main', ease: 'expo.out' })
 	}
 
-	useEffect(() => {
-		gsapAnimation()
-	}, [])
-
 	return (
 		<main className={styles.home}>
 			<SEO title='Riversun Studio - UI/UX Designer and Website Developer' />
@@ -97,7 +93,7 @@ export default function Home() {
 									height={320}
 									title='Website Development'
 									desc={`The website will make you easier to reach new customers
-								in this digital era. Show who you are with a website that describes your self-image. Let's discuss with us about 
+								in this digital era. Show who you are with a website that describes your self-image. Let's discuss about 
 								your dream website, and let's make it happen together`}
 								/>
 							</section>

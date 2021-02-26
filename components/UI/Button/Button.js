@@ -38,9 +38,28 @@ const Button = ({
 	}
 	return (
 		<button className={className} onClick={action} disabled={isDisabled} type={type}>
-			<span>{whatsapp ? <ImWhatsapp /> : ''}</span>
-			{label} <span>{icon ? <MdArrowForward /> : ''}</span>
-			<span>{loading ? <MdSend /> : ''}</span>
+			{whatsapp ? (
+				<span>
+					<ImWhatsapp />
+				</span>
+			) : (
+				''
+			)}
+			{label}{' '}
+			{icon ? (
+				<span>
+					<MdArrowForward />
+				</span>
+			) : (
+				''
+			)}
+			{loading ? (
+				<span>
+					<MdSend />
+				</span>
+			) : (
+				''
+			)}
 		</button>
 	)
 }

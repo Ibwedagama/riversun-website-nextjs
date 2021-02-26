@@ -1,0 +1,53 @@
+@import '../styles/variabels';
+
+.portfolio {
+	position: relative;
+	background: $white;
+
+	.content {
+		padding: 150px 0;
+
+		.title {
+			font-family: Raleway;
+			font-style: normal;
+			font-weight: 800;
+			font-size: 3.5rem;
+			line-height: 56px;
+			text-align: center;
+			color: $primary_black;
+			margin-bottom: 150px;
+		}
+
+		.cards {
+			width: 100%;
+			display: grid;
+			grid-template-columns: 1fr;
+			row-gap: 50px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.portfolio {
+		.content {
+			.title {
+				margin-bottom: 200px;
+			}
+			.cards {
+				grid-template-columns: repeat(2, 1fr);
+				column-gap: 24px;
+				row-gap: 60px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	.portfolio {
+		.content {
+			.cards {
+				grid-template-columns: repeat(3, 1fr);
+			}
+		}
+	}
+}

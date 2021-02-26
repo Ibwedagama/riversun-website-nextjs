@@ -5,10 +5,15 @@ import { gsap } from 'gsap/dist/gsap'
 import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger)
+import { gsapAnimation } from '../util/Animation'
 
 function MyApp({ Component, pageProps }) {
 	const [toggleSidebar, setToggleSidebar] = useState(false)
 	const [toggleModal, setToggleModal] = useState(false)
+
+	useEffect(() => {
+		gsapAnimation()
+	}, [Component])
 
 	useEffect(() => {
 		setToggleSidebar(false)
