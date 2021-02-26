@@ -7,13 +7,16 @@ import Process from '../components/Card/Process'
 import Service from '../components/Card/Service'
 import Project from '../components/Card/Project'
 import SEO from '../components/SEO/SEO'
-import { gsapAnimation } from '../util/Animation'
+import { gsapHomeAnimation } from '../util/Animation'
 import { gsap } from 'gsap/dist/gsap'
 
 export default function Home() {
 	const handleScrollToMain = () => {
 		gsap.to(window, { duration: 1.3, scrollTo: '#main', ease: 'expo.out' })
 	}
+	useEffect(() => {
+		gsapHomeAnimation()
+	}, [])
 
 	return (
 		<main className={styles.home}>
@@ -159,9 +162,10 @@ export default function Home() {
 			</section>
 
 			{/* Featured Projects */}
+
 			<section className={styles.featured_projects}>
 				<Wrapper>
-					<section className={styles.container_featured_projects}>
+					{/* <section className={styles.container_featured_projects}>
 						<h2 className={`${styles.title} section-4`}>
 							<span className={styles.titleDecoration}>04</span>Featured Projects
 						</h2>
@@ -169,7 +173,7 @@ export default function Home() {
 							Some of the projects we've made with our amazing clients
 						</p>
 						<section className={styles.projects}>
-							{/* <Project
+							<Project
 								src='/assets/images/FP1.webp'
 								width={505}
 								height={607}
@@ -177,14 +181,14 @@ export default function Home() {
 								title='Our Journey With Plant Story App'
 								link='/'
 								tag='#STUDY CASE 1'
-							/> */}
+							/>
 							<section className='section-4'>
 								<p className={styles.subtitle} style={{ fontSize: '1.2rem', fontWeight: '600' }}>
 									Under Development
 								</p>
 							</section>
 						</section>
-					</section>
+					</section> */}
 				</Wrapper>
 			</section>
 		</main>

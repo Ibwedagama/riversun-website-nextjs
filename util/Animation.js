@@ -1,6 +1,6 @@
 import { gsap } from 'gsap/dist/gsap'
 
-export function gsapAnimation() {
+export function gsapHomeAnimation() {
 	let tl = gsap.timeline({ defaults: { ease: 'expo.out', opacity: 0 } })
 	tl.from('#hero-image', { x: '100%', duration: 1.5 })
 		.from('.hero-title', { y: '100%', stagger: 0.4, duration: 1.5 }, '<.5')
@@ -41,15 +41,16 @@ export function gsapAnimation() {
 		opacity: 0,
 		stagger: 0.3,
 	})
+}
 
-	let tl2 = gsap.timeline({
+export function gsapFooterAnimation() {
+	let tl = gsap.timeline({
 		scrollTrigger: {
 			trigger: '.footer',
 			start: 'top center',
 		},
 	})
-
-	tl2.from('.footer-links', {
+	tl.from('.footer-links', {
 		y: '10',
 		opacity: 0,
 		duration: 0.5,
