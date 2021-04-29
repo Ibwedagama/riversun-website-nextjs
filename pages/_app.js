@@ -5,7 +5,7 @@ import { gsap } from 'gsap/dist/gsap'
 import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger)
-import { gsapFooterAnimation } from '../util/Animation'
+// import { gsapFooterAnimation } from '../util/Animation'
 
 function MyApp({ Component, pageProps }) {
 	const [toggleSidebar, setToggleSidebar] = useState(false)
@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
 	useEffect(() => {
 		setToggleSidebar(false)
 		setToggleModal(false)
-		gsapFooterAnimation()
+		// gsapFooterAnimation()
 	}, [Component])
 
 	useEffect(() => {
